@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente IA</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.5/babel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 250px 1fr;
+            gap: 20px;
+            height: calc(100vh - 40px);
+        }
+        .sidebar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 20px;
+            color: white;
+        }
+        .main-content {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        .feature-item {
+            padding: 10px;
+            border-radius: 10px;
+            margin-bottom: 10px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        .nav-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .nav-item:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2 class="text-xl font-bold mb-6">AssistenteGPT</h2>
+            <div class="mb-8">
+                <div class="nav-item">🏠 Início</div>
+                <div class="nav-item">💬 Chat</div>
+                <div class="nav-item">⚙️ Configurações</div>
+                <div class="nav-item">❓ Ajuda</div>
+            </div>
+            <div>
+                <h3 class="text-sm font-semibold mb-3">RECURSOS</h3>
+                <div class="feature-item">
+                    <h4 class="font-medium">Processamento de Linguagem</h4>
+                    <div class="text-sm opacity-80">Compreensão avançada de texto</div>
+                </div>
+                <div class="feature-item">
+                    <h4 class="font-medium">Análise de Dados</h4>
+                    <div class="text-sm opacity-80">Insights em tempo real</div>
+                </div>
+                <div class="feature-item">
+                    <h4 class="font-medium">Assistência 24/7</h4>
+                    <div class="text-sm opacity-80">Sempre disponível</div>
+                </div>
+            </div>
+        </div>
+        <div class="main-content">
+            <div id="chat-root"></div>
+        </div>
+    </div>
+
+    <script type="text/babel">
+        // Aqui vai o código do ChatInterface que forneci anteriormente
+        // Cole aqui o código do componente React
+
+        ReactDOM.render(<ChatInterface />, document.getElementById('chat-root'));
+    </script>
+</body>
+</html>
